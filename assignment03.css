@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color:#FFE4C4;
+  padding: 50px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 20%;
+  height: 100%; /* only for demonstration, should be removed */
+  background: #F4A460;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+
+
+article {
+  float: left;
+  padding: 40px;
+  width: 80%;
+  background-color: #f1f1f1;
+  height: 100%; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #4169E1;
+  padding: 40px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.dunaj{
+
+  border-radius: 55px; 
+  border: 5px solid #ddd;
+  border-radius: 9px;
+  padding: 60px;
+  width: 350px;
+  box-shadow:  0 0 9px 15px rgba(0, 140, 186, 0.5);
+ 
+ }
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+
+.text {
+  float: right;
+   width: 100px;
+  height: 100px;
+  border: 1px solid blue;
+}
+ 
+
+
+ .column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+
+
+.pquote {
+    float: left;
+    width: 200px;
+    background: #ddf;
+    font-weight: bold;
+    padding: 20px;
+    margin: 0 12px 12px 0;
+}
+
+blockquote {
+    margin: 0; /* gets rid of the default blockquote margin */
+}
+
+
+.event {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+.event:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+.event p  {
+  display: inline;
+}
