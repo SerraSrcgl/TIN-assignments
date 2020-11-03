@@ -9,6 +9,10 @@ body {
 }
 
 /* Header/logo Title */
+img.rounded-corners {
+  border-radius: 30px;
+}
+
 .header {
   padding: 60px;
   text-align: center;
