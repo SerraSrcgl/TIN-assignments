@@ -1,0 +1,28 @@
+input[type=text], input[type=password] {
+ 
+background-color: yellow;
+
+}
+
+input[type=text], input[type=userName] {
+background-color: green;
+}
+
+textarea{
+background-color: orange;
+}
+
+
+label[for="userName"] {
+	font-style: italic;
+	 color:aquamarine;
+}
+label[for="password"]{
+	font-family: Impact, Charcoal, sans-serif;
+	color:blue;
+}
+
+label [for="Citiess"]{
+	 font-family: Arial, Helvetica, sans-serif;
+}
+}
