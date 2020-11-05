@@ -9,20 +9,6 @@ body {
     margin-right: auto;
     width: 400px;
 }
-.imagee{
-
-  width: 400px;
-  height: 200px;
-  border:2px solid #fff;
-  background: url(img/tiger.png) no-repeat;
-  -moz-box-shadow: 10px 10px 5px #ccc;
-  -webkit-box-shadow: 10px 10px 5px #ccc;
-  box-shadow: 10px 10px 5px #ccc;
-  -moz-border-radius:25px;
-  -webkit-border-radius:25px;
-  border-radius:25px;
-}
-
 
 .header-image {
     border-radius: 10px;
@@ -37,13 +23,13 @@ body {
 }
 
 .main {
-    display: grid;
-    grid-template-columns: 350px auto;
-    align-items: start;
+    display: flex;
 }
 
 .main-gallery {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
 }
 
 .main-gallery-figure {
@@ -60,13 +46,13 @@ body {
 }
 
 .main-article {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 260px);
+    display: flex;
     flex-wrap: wrap;
     width: 100%;
 }
 
 .main-article-column {
+    flex-basis: 260px;
     padding-left: 15px;
     border-bottom: #ccc solid 2px;
     margin-bottom: 15px;
@@ -105,20 +91,16 @@ blockquote {
 
 @media(max-width: 800px) {
     .main {
-        grid-template-columns: auto;
-        justify-items: center;
+        flex-direction: column-reverse;
+        align-items: center;
     }
 
     .main-gallery {
         width: 50%;
     }
 
-    .main-article {
-        grid-template-columns: auto;
-        grid-row-start: 1;
-    }
-
     .main-article-column {
+        flex-basis: 100%;
         padding-right: 10px;
         padding-bottom: 10px;
     }
@@ -126,7 +108,6 @@ blockquote {
     .main-article-image {
         max-width: 30%;
     }
-
 }
 
 h1, .quote, footer {
