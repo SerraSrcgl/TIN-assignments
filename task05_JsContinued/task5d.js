@@ -11,9 +11,11 @@ let student = {
     return `${this.firstName} ${this.lastName}`;
   },
 
-    set fullName(name) {
-    [this.firstName, this.lastName] = value.split(" ");
-},
+   set fullName (name) {
+        var words = name.toString().split(' ');
+        this.firstName = words[0] || '';
+        this.lastName = words[1] || '';
+    }
 
 // set fullName is executed with the given value.user.fullName = "Sheldon Cooper";
     get averageGrade() {
