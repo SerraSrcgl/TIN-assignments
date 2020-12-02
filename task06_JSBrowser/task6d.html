@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tutorial 6 task D</title>
+    <link rel="stylesheet" href="task6d.css">
+</head>
+<body>
+<form onsubmit="addTableRow(); return false">
+    <label for="name">Name</label><br>
+    <input type="text" id="name" name="name" required><br>
+    <label for="bookName">Book Name</label><br>
+    <input type="text" id="bookName" name="bookName" required><br>
+    <label for="pageNumber">Page Number</label><br>
+    <input type="number" id="pageNumber" name="pageNumber" required><br><br>
+    <input type="submit" value="Add"><br><br>
+</form>
+
+<table id="table">
+    <tr>
+        <th>Name</th>
+        <th>Book Name</th>
+        <th>Page Number</th>
+    </tr>
+</table>
+<script src="task6d.js"></script>
+</body>
+</html>

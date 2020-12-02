@@ -1,0 +1,13 @@
+#table {
+    width: 100%;
+}
+
+#table th {
+    background: pink;
+    padding: 5px;
+}
+
+#table td {
+    background: linen;
+    padding: 6px;
+}
