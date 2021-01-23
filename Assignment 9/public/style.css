@@ -1,0 +1,59 @@
+@charset "ISO-8859-1";
+body {
+    background: #242831;
+    color: #fafbff;
+    font-family: "Source Sans Pro";
+}
+
+h2 {
+    width: 100%;
+    text-align: center;
+    margin: 40px 0;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+input[type="button"] {
+    padding: 10px 35px;
+    display: block;
+    margin: 0 auto;
+    margin-top: -10px;
+    background: #fafbff;
+    color: #242831;
+    font-size: 20px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #e1e1e1;
+}
+
+input[type="number"]:focus {
+    border-bottom: 2px solid #ddd;
+    transition: 0.2s ease;
+}
+
+input[type="number"],
+select {
+    display: block;
+    margin: 50px auto;
+    background: transparent;
+    border: none;
+    border-bottom: 0.5px solid #fff;
+    width: 40%;
+    line-height: 50px;
+    outline: none;
+    color: #fafbff;
+    font-size: 20px;
+}
+
+option {
+    color: #242831;
+}
+
+p {
+    text-align: center;
+    font-size: 40px;
+}

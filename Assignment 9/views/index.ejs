@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function handle() {
+
+
+            let formEl = document.getElementById('form');
+            let headers = new Headers();
+            headers.set('Content-Type', 'application/json');
+            let formData = {
+                val1: document.getElementById("val1").value,
+                val2: document.getElementById("val2").value,
+                operator: document.getElementById("operations").value
+            };
+
+            let data = JSON.stringify(formData);
+
+            let url = "http://localhost:5000/calculate";
+
+            let request = new Request(url, {
+                method: "post",
+                headers,
+                body: data
+            });
+
+            let http_request = new XMLHttpRequest();
+            http_request.open("POST", "/calculate", true);
+            http_request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+            http_request.onreadystatechange = handleChanges;
+            http_request.send(data);
+
+            function handleChanges() {
+                if (http_request.readyState == 4) {
+                    if (http_request.status == 200) {
+                        let data = JSON.parse(http_request.response);
+                        let result = `${data.val1} ${data.operator} ${data.val2} = ${data.result}`;
+                        let p = document.getElementsByTagName("p")[0];
+                        p.textContent = result;
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Calculator </h2>
+    <form id="form">
+        <div>
+            <input type="number" id="val1" name="val1" placeholder="Enter first number">
+            <input type="number" id="val2" name="val2" placeholder="Enter second number">
+            <select id="operations">
+                <option value="multiply">Multiply</option>
+                <option value="divide">Divide</option>
+                <option value="add">Add</option>
+                <option value="substract">Substract</option>
+            </select>
+            <input type="button" value="Calculate" onclick="handle()">
+        </div>
+    </form>
+    <p></p>
+</body>
+
+</html>
