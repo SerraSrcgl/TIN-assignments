@@ -1,0 +1,22 @@
+<%- include('header'); -%>
+  <div class="container">
+    <div>
+      <% if (data) { %>
+      <ul>
+        <% for (var key in data) { %>
+        <li>
+          <h2>
+            <%= key.charAt(0).toUpperCase() + key.slice(1); %>: 
+            <span> <%= data[key] %></span>
+          </h2>
+        </li>
+        <% } %>
+      </ul>
+      <% } else{ %>
+      <h2>Email: <span> <%= email %> </span></h2>
+      <h2>Number of hours: <span> <%= hours %></span></h2>
+      <h2>Comment: <span> <%= comment %></span></h2>
+      <% } %>
+    </div>
+  </div>
+<%- include('footer'); -%>

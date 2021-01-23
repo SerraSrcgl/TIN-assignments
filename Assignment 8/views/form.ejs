@@ -1,0 +1,9 @@
+<%- include('header'); -%>
+  <h1><%= formTitle %></h1>
+  <form method="POST" action="/formdata">
+    <input name="email" type="text" id="email" placeholder="Enter your email address" />
+    <input name="hourNum" type="number" id="hourNum" placeholder="Enter number of hours" />
+    <textarea name="comment" rows="10" cols="30" placeholder="Enter your comment."></textarea>
+    <input type="submit" value="Submit">
+  </form>
+<%- include('footer'); -%>

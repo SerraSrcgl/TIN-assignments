@@ -1,0 +1,80 @@
+@charset "ISO-8859-1";
+
+body {
+  background: #242831;
+  color: #e0e1e7;
+  font-family: "Gothic";
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+  margin: 40px 0;
+  font-size: 40px;
+  font-weight: 400;
+}
+
+span{
+  font-weight: 100;
+}
+
+input[type="submit"] {
+  padding: 10px 35px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 40px;
+  background: #fafbff;
+  color: #242831;
+  font-size: 30px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background: #e1e1e1;
+}
+
+input[type="number"]:focus,
+input[type="text"] :focus,
+textarea:focus {
+  border-bottom: 2px solid #ddd;
+  transition: 0.2s ease;
+}
+
+input[type="number"],
+input[type="text"],
+textarea {
+  display: block;
+  margin: 20px auto;
+  background: transparent;
+  border: none;
+  border-bottom: 0.5px solid #fff;
+  width: 40%;
+  line-height: 50px;
+  outline: none;
+  color: #fafbff;
+  font-size: 20px;
+}
+
+textarea {
+  margin-top: 60px;
+  border: 0.5px solid #fff;
+  line-height: 30px;
+}
+
+textarea:focus {
+  background: #242840;
+  /* color: #242831; */
+}
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+}
+.container > div {
+  font-size: 30px;
+}
